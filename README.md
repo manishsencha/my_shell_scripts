@@ -42,7 +42,7 @@ I have 2 components
   </li>
   <li>
     Make all the bin files accessible from anywhere. This will be done by adding <br>
-    <code>export PATH=$PATH:$HOME/scripts/bin</code> <br><br>
+    <code>export PATH=$PATH:$HOME/scripts/bin</code> <br>
     to the end of <code>~/.bashrc</code> file.
   </li>
   <li>
