@@ -35,18 +35,18 @@ I have 2 components
 ## Installation instructions
 <ul> 
   <li>
-    Clone this repository in <code> $HOME </code> directory using <code> git clone https://github.com/manishsencha/my_shell_scripts.git scripts</code>.
+    Clone this repository in <code> $HOME </code> directory using <br><code>git clone https://github.com/manishsencha/my_shell_scripts.git scripts</code>.
   </li>
   <li>
-    Make bin folder executable using <code> chmod +x $HOME/scripts/bin/* </code>
+    Make bin folder executable using <br><code> chmod +x $HOME/scripts/bin/* </code>
   </li>
   <li>
     Make all the bin files accessible from anywhere. This will be done by adding <br>
-    <code> export PATH=$PATH:$HOME/scripts/bin </code> <br>
-    to the end of <code> ~/.bashrc </code> file.
+    <code>export PATH=$PATH:$HOME/scripts/bin</code> <br>
+    to the end of <code>~/.bashrc</code> file.
   </li>
   <li>
-    Finally, run <code> source ~/.bashrc </code>. We are good to go. Happy Happy Joy Joy:) 
+    Finally, run <code>source ~/.bashrc</code>. We are good to go. Happy Happy Joy Joy:) 
   </li>
 </ul>
 
