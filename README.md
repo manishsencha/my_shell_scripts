@@ -7,6 +7,7 @@ My daily tasks or frequest tasks are handled by these scripts which are growing 
 ### reasy
 This script creates react app and clears all boilerplate code and gives me ready to use react project. 
 <br>
+
 <code> reasy project_name </code>
 
 ### comp
