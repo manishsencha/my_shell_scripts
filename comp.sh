@@ -2,7 +2,7 @@
 
 # This script is competitive helper to easily initiate a new file
 
-template_dir=$HOME/templates
+template_dir=$HOME/scripts/assets/templates
 
 current_dir=$PWD
 
