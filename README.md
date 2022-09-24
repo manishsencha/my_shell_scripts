@@ -18,7 +18,7 @@ Now, a single command does it. <br>
 <code> comp filename.cpp </code>
 
 ## How??
-I keep the scripts in my home (<code> echo $HOME </code>) directory and building them keeping this directory as epicentre.
+I keep the scripts in my home ( <code>echo $HOME</code> ) directory and building them keeping this directory as epicentre.
 <br>
 <br>
 I have 2 components
