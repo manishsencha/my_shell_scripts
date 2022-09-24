@@ -1,28 +1,94 @@
 #include <bits/stdc++.h>
+ 
+#define ll long long int
+#define rep(i, n) for (i = 0; i < n; ++i)
+#define REP(i, k, n) for (i = k; i <= n; ++i)
+#define REPR(i, k, n) for (i = k; i >= n; --i)
+#define vi vector<int>
+#define vll vector<long long int>
+#define vs vector<string>
+#define vc vector<char>
+#define pii pair<int, int>
+#define mpair(a, b) make_pair(a, b)
+#define pback(a) push_back(a)
+#define scan(x) cin >> x
+#define scanTwo(x, y) cin >> x >> y
+#define print(x) cout << x << " "
+#define printn(x) cout << x << "\n"
+#define printnTwo(x, y) cout << x << " " << y << "\n"
+#define newl cout << "\n"
+#define fin freopen("input.txt", "r", stdin)
+#define fout freopen("output.txt", "w", stdout)
+#define fastio               \
+    ios::sync_with_stdio(0); \
+    cin.tie(0);              \
+    cout.tie(0)
+#define testCases \
+    int T;        \
+    cin >> T;     \
+    while (T--)
+ 
 using namespace std;
-
-#define all(x) (x).begin(), (x).end()
-#define sz(x) (int((x).size()))
-
-#define MOD 1000000007
-#define ll long long
-
-#define fastio                        \
-    ios_base::sync_with_stdio(false); \
-    cin.tie(NULL);
-
-#define tc    \
-    int t;    \
-    cin >> t; \
-    while (t--)
-
-void solve() {
-
+ 
+bool isPrime(int n)
+{
+    if (n <= 1)
+        return false;
+    else if (n % 2 == 0 && n != 2)
+        return false;
+    else
+    {
+        for (int i = 3; i * i <= n; i += 2)
+        {
+            if (n % i == 0)
+                return false;
+        }
+        return true;
+    }
 }
-
+ 
+template <typename T>
+void printList(initializer_list<T> arr)
+{
+    for (const auto &value : arr)
+        cout << value << " ";
+    cout << '\n';
+}
+ 
+void test_case()
+{
+    // cout << "Hello World\n";
+    int n, k;
+    cin >> n >> k;
+    vector<int> v(n);
+    for (int i = 0; i < n; ++i)
+    {
+        cin >> v[i];
+    }
+    sort(v.begin(), v.begin() + k);
+    sort(v.begin() + k, v.end());
+    int res = 0, i = k - 1, j = k;
+    while (i >= 0 && j < n)
+    {
+        if (v[i] > v[j])
+        {
+            swap(v[i], v[j]);
+            res++;
+            i--;
+            j++;
+        }
+        else{
+            break;
+        }
+    }
+    printn(res);
+}
+ 
 int main()
 {
     fastio;
-    solve();
-    return 0;
+    testCases
+    test_case();
+    // debug();
 }
+
