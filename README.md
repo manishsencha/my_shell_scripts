@@ -16,3 +16,39 @@ I used to create a file then copy paste boilerplate from another file or sometim
 Now, a single command does it. <br>
 
 <code> comp filename.cpp </code>
+
+## How??
+I keep the scripts in my home (<code> echo $HOME </code>) directory and building them keeping this directory as epicentre.
+<br>
+<br>
+I have 2 components
+<ul>
+  <li> 
+    First, the scripts resides in the base directory and all the executables are in <code> bin </code>
+    directory. 
+  </li>
+  <li>
+    Second, you have to make all the scripts in bin excutables and also make that folder accessible from anywhere. <br>
+  </li>
+</ul>
+
+## Installation instructions
+<ul> 
+  <li>
+    Clone this repository in <code> $HOME </code> directory using <code> git clone https://github.com/manishsencha/my_shell_scripts.git scripts</code>.
+  </li>
+  <li>
+    Make bin folder executable using <code> chmod +x $HOME/scripts/bin/* </code>
+  </li>
+  <li>
+    Make all the bin files accessible from anywhere. This will be done by adding <br>
+    <code> export PATH=$PATH:$HOME/scripts/bin </code> <br>
+    to the end of <code> ~/.bashrc </code> file.
+  </li>
+  <li>
+    Finally, run <code> source ~/.bashrc </code>. We are good to go. Happy Happy Joy Joy:) 
+  </li>
+</ul>
+
+   
+    
