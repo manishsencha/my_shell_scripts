@@ -24,7 +24,7 @@ I keep the scripts in my home ( <code>echo $HOME</code> ) directory and building
 I have 2 components
 <ul>
   <li> 
-    First, the scripts resides in the base directory and all the executables are in <code> bin </code>
+    First, the scripts resides in the base directory ( <code>$HOME/scripts</code> ) and all the executables are in <code>bin</code>
     directory. 
   </li>
   <li>
