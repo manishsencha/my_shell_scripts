@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
- 
+
+using namespace std;
 #define ll long long int
 #define rep(i, n) for (i = 0; i < n; ++i)
 #define REP(i, k, n) for (i = k; i <= n; ++i)
@@ -27,9 +28,8 @@
     int T;        \
     cin >> T;     \
     while (T--)
- 
-using namespace std;
- 
+
+
 bool isPrime(int n)
 {
     if (n <= 1)
@@ -46,7 +46,7 @@ bool isPrime(int n)
         return true;
     }
 }
- 
+
 template <typename T>
 void printList(initializer_list<T> arr)
 {
@@ -54,36 +54,13 @@ void printList(initializer_list<T> arr)
         cout << value << " ";
     cout << '\n';
 }
- 
+
 void test_case()
 {
     // cout << "Hello World\n";
-    int n, k;
-    cin >> n >> k;
-    vector<int> v(n);
-    for (int i = 0; i < n; ++i)
-    {
-        cin >> v[i];
-    }
-    sort(v.begin(), v.begin() + k);
-    sort(v.begin() + k, v.end());
-    int res = 0, i = k - 1, j = k;
-    while (i >= 0 && j < n)
-    {
-        if (v[i] > v[j])
-        {
-            swap(v[i], v[j]);
-            res++;
-            i--;
-            j++;
-        }
-        else{
-            break;
-        }
-    }
-    printn(res);
+
 }
- 
+
 int main()
 {
     fastio;
@@ -91,4 +68,3 @@ int main()
     test_case();
     // debug();
 }
-
