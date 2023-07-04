@@ -125,31 +125,18 @@ export PDSH_RCMD_TYPE=ssh
 # time on terminal
 PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\][\t] \u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
-# Hadoop env
-export HADOOP_HOME=$HOME/hadoop
-export HADOOP_MAPRED_HOME=$HADOOP_HOME
-export HADOOP_COMMON_HOME=$HADOOP_HOME
+# Aliases (custom commands)
+alias g='xdg-open'
+alias zxgit='git config user.name "Manish Sencha" && git config user.email "manish@zignex.com"'
+alias msgit='git config user.name "Manish Sencha" && git config user.email "manishsencha2001@gmail.com"'
+alias update="sudo apt update && sudo apt upgrade -y"
+alias sai="sudo apt install"
+alias sshdemo="ssh -L 5432:localhost:5432 -i ~/.ssh/zx sshdemo"
+alias sshdev="ssh -L 8085:localhost:5432 -i ~/.ssh/zx sshdev"
+alias sshqa="ssh -L 8085:localhost:5432 -i ~/.ssh/zx sshqa"
+alias gtc="git add . && git commit -m"
+alias gcb="git checkout -b"
+alias gck="git checkout"
+alias devlogs="scp -r -i ~/.ssh/zx ubuntu@sshdev:/zignex_logs $HOME/Desktop/zignex/dev_logs" 
+alias demologs="scp -r -i ~/.ssh/zx ubuntu@sshdemo:/data/zignex_logs $HOME/Desktop/zignex/demo_logs" 
 
-export HADOOP_HDFS_HOME=$HADOOP_HOME
-export YARN_HOME=$HADOOP_HOME
-export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
-export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
-export HADOOP_INSTALL=$HADOOP_HOME
-export HADOOP_OPTS="$HADOOP_OPTS -Djava.library.path=$HADOOP_HOME/lib/native"
-
-export HADOOP_CLASSPATH=$(hadoop classpath)
-
-# Github Access Token
-export GAT=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
-
-# Android emulator
-export ANDROID_SDK_ROOT=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
-export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
-
-# Spark paths
-export SPARK_HOME=$HOME/spark
-export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
-
-# Custom Commands
-export PATH=$PATH:$HOME/scripts/bin
